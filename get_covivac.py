@@ -25,7 +25,7 @@ if __name__ == '__main__':
     while True:
         if time_online % 1440 == 0:
             send_mail('emailsender9221@gmail.com', 'alexei4!!', 'di.im2015@yandex.ru',
-                      'Online', 'Still online')
+                      'Online', 'Still online, {0} requests'.format(time_online / 30))
         try:
             req = requests.get(url, headers=headers)
             src = req.text
